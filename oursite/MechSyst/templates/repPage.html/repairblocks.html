@@ -1,0 +1,15 @@
+{% extends 'MechSyst/base.html' %}
+
+{% block content %}
+    {% for repair in Repairs %}
+        <div>
+            <article class="">
+                <time class="date">
+                    {{ repDetails.published_date }}
+                </time>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p>{{ repDetails.text|linebreaksbr }}</p>
+            </article>
+        </div>
+    {% endfor %}
+{% endblock %}
